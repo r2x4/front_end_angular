@@ -14,10 +14,14 @@ export const routes: Routes = [
         path: 'trending',
         loadComponent: () => import('./gifs/pages/trending/trending.component'),
       },
+      {
+        path: '**',
+        redirectTo: 'trending'
+      },
     ]
 
   },
-  
+
   {
     path: '**',
     redirectTo: 'dashboard'
