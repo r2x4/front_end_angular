@@ -1,11 +1,5 @@
-
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-
-    <gif-list-item />
-    <gif-list-item />
-    <gif-list-item />
-    <gif-list-item />
-    <gif-list-item />
-    <gif-list-item />
-
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  <div *ngFor="let gif of gifs">
+    <img class="h-auto max-w-full rounded-lg" [src]="gif" alt="trending gif">
+  </div>
 </div>

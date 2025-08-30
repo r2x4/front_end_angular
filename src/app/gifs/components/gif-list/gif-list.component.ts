@@ -1,9 +1,12 @@
-import {  Component } from '@angular/core';
-import { GifListItemComponent } from './gif-list-item/gif-list-item.component';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'gif-list',
-  imports: [GifListItemComponent],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './gif-list.component.html',
 })
-export class GifListComponent { }
+export class GifListComponent {
+  @Input() gifs: string[] = [];
+}
